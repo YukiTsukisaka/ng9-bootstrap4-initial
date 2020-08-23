@@ -1,0 +1,36 @@
+<p>selectform works!</p>
+<!-- <form>
+    <select name="select">
+        <ng-container *ngFor="let d of data">
+            <option value={{d.value}}>{{d.label}}</option>
+        </ng-container>
+    </select>
+    <br>
+    <button (click)="update()">更新</button>
+    <input type="submit">
+</form>
+<div class="text-center">
+    <button class="btn text-center" (click)="clickNext()">Next</button>
+</div> -->
+<button class="btn text-center" (click)="getRestaurant('AREA200')">Next</button>
+<select>
+    <option *ngFor="let r of rest">{{ r.name }}</option>        
+</select>
+<table border="1">
+    <thead>
+        <tr>
+            <th>店名</th>
+            <th>カテゴリ</th>
+            <th>URL</th>
+            <th>住所</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of rest">
+            <td>{{ r.name }}</td>
+            <td>{{ r.category }}</td>
+            <td>{{ r.url }}</td>
+            <td>{{ r.address }}</td>
+        </tr>
+    </tbody>
+</table>
